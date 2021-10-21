@@ -15,4 +15,4 @@ indent.o: indent.cpp indent.h
 
 
 clean:
-	rm -f unindent.o tests.o
+	rm -f unindent.o tests.o main.o indent.o
