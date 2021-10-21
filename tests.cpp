@@ -16,3 +16,9 @@ TEST_CASE("countChar")
     CHECK(countChar("asdf", '.') == 0);
     CHECK(countChar("", 'a') == 0);
 }
+
+TEST_CASE("addLeadingSpaces")
+{
+    CHECK(addLeadingSpaces("", 2) == "\t\t");
+    CHECK(addLeadingSpaces("asdf", 3) == "\t\t\tasdf");
+}
