@@ -3,10 +3,20 @@
 #include "unindent.h"
 #include "indent.h"
 
+void format(std::string filename);
+
 int main()
 {
-    std::ifstream infile("bad-code.cpp");
-    std::ofstream outfile("bad-code FORMATTED.cpp");
+    format("bad-code.cpp");
+    format("bad-code-2.cpp");
+
+    return 0;
+}
+
+void format(std::string filename)
+{
+    std::ifstream infile(filename);
+    std::ofstream outfile("FORMATTED - " + filename);
 
     std::string line;
     int numberOfSpaces = 0;
@@ -19,6 +29,4 @@ int main()
         numberOfSpaces += countChar(line, '{');
         outfile << line << std::endl;
     }
-
-    return 0;
 }
