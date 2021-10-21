@@ -1,9 +1,11 @@
-main:
-
+main: main.o unindent.o indent.o
+	g++ -o main main.o unindent.o indent.o
 
 tests: tests.o unindent.o indent.o
 	g++ -o tests tests.o unindent.o indent.o
 
+
+main.o: main.cpp unindent.h indent.h
 
 tests.o: tests.cpp unindent.h indent.h
 
