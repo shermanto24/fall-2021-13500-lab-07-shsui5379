@@ -13,6 +13,7 @@ int main()
     return 0;
 }
 
+//this function formats the file passed
 void format(std::string filename)
 {
     std::ifstream infile(filename);
