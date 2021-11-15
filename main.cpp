@@ -14,6 +14,8 @@ int main()
 }
 
 //this function formats the file passed
+//the parameter expects the name of a file
+//that exists in the working directory
 void format(std::string filename)
 {
     std::ifstream infile(filename);
